@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Trần Minh Quang",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -124.8,
+      "left": -158.36,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -99.6, "left": 13.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 17,
+      "left": 48,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn2:2.l", "esp:4", "green", [ "v-9.2", "h-105.6" ] ],
+    [ "esp:GND.2", "led1:C", "black", [ "h38.4", "v38.4" ] ],
+    [ "led1:C", "btn2:1.l", "black", [ "v0" ] ],
+    [ "esp:2", "led1:A", "yellow", [ "h48", "v-76.8", "h48" ] ]
+  ],
+  "dependencies": {}
+}
