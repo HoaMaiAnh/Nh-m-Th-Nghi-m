@@ -3,15 +3,18 @@
 ## 1. So sánh delay(), millis() và Hardware Timer
 
 ### 1.1. Mục tiêu
-So sánh ba phương pháp tạo chu kỳ định kỳ trên ESP32, đánh giá độ ổn định thời gian thông qua độ lệch giữa chu kỳ thực tế và chu kỳ mục tiêu.
+So sánh delay(), millis() và Hardware Timer trên ESP32.
 
 ### 1.2. Thông số thử nghiệm
+| Thông số | Giá trị |
+|---|---|
 | Chu kỳ mục tiêu | 100 ms |
 | Thời gian thử nghiệm | 3000 ms |
 | Baud rate Serial | 115200 |
 
 ### 1.3. Kết quả thực nghiệm
 | Phương pháp | Số lần | Độ lệch trung bình (ms) | Độ lệch lớn nhất (ms) |
+|---|---:|---:|---:|
 | delay() | 29 | 0.000 | 0.000 |
 | millis() | 29 | 0.001 | 0.010 |
 | Hardware Timer | 28 | 0.001 | 0.001 |
