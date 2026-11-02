@@ -40,6 +40,7 @@ Chạy chương trình trên ESP32 với thời gian Deep Sleep được thiết
 
 **Kết quả Serial Monitor:**
 
+```text
 ESP32 da thuc day!
 So lan thuc day: 1
 Ngu 10 giay...
@@ -51,6 +52,7 @@ Ngu 10 giay...
 ESP32 da thuc day!
 So lan thuc day: 3
 Ngu 10 giay...
+```
 
 ### 2.3. Nhận xét và kết luận
 
